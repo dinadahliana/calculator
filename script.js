@@ -5,7 +5,7 @@ const reset = document.querySelector(".clear");
 let output = document.querySelector(".summary");
 
 const operator = ["+", "-", "*", "/"];
-const other = ["=", "C", "+/-"];
+const other = ["=", "C", "+/-", "%"];
 let input = "";
 
 toolsButton.forEach(btn => {
@@ -27,16 +27,16 @@ toolsButton.forEach(btn => {
 
 summary.addEventListener("click", () =>{
     console.log(input);
-    
     console.log(math.evaluate(input));
     
-    output.innerHTML = math.evaluate(input);
+    output.innerText = math.evaluate(input);
     
-    input = "";   
+    // after click "=", the input back to empty
+    input = "";
 });
 
 reset.addEventListener("click", () => {
     input = "";
-    input.innerHTML = "";
-    output.innerHTML = "";
-})
+    input.innerText = "";
+    output.innerText = "";
+});
