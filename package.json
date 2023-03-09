@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dinadahliana/calculator/issues"
   },
-  "homepage": "https://github.com/dinadahliana/calculator#readme"
+  "homepage": "https://github.com/dinadahliana/calculator#readme",
+  "dependencies": {
+    "mathjs": "^11.6.0"
+  }
 }
