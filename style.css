@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 100px 0px 0px 0px;
+    color: white;
 }
 
 
@@ -38,6 +39,7 @@ body {
 
 .summary {
    align-self: center;
+   text-align: right;
 }
 
 .tools {
@@ -53,4 +55,14 @@ body {
 
 .button:hover {
     background-color: #ffb703;
+}
+
+.clear {
+    grid-column: span 3;
+}
+
+.brand {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
 }

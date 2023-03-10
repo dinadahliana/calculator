@@ -5,12 +5,13 @@ const reset = document.querySelector(".clear");
 let output = document.querySelector(".summary");
 
 const operator = ["+", "-", "*", "/"];
-const other = ["=", "C", "+/-", "%"];
+const other = ["=", "C", "AC"];
 let input = "";
 
 toolsButton.forEach(btn => {
     btn.addEventListener("click", (e) => {
         const buttonContent = e.target.innerText
+        output.innerHTML = "";
         if (operator.includes(buttonContent)) {
             input += ` ${buttonContent} `;
             display.innerText = input;
@@ -29,6 +30,7 @@ summary.addEventListener("click", () =>{
     console.log(input);
     console.log(math.evaluate(input));
     
+    display.innerText = input;
     output.innerText = math.evaluate(input);
     
     // after click "=", the input back to empty
